@@ -20,13 +20,13 @@
                     <h1>Búsqueda de libros: </h1>
                     <form action='resultados.jsp' method='GET'>
                         <div class="form-group">
-                            <label for="name">Valor de la búsqueda</label>
-                            <input type="text" class="form-control" id= "name" name="buscar"  placeholder="Nombre, autor...">
+                            <label for="search">Valor de la búsqueda</label>
+                            <input type="text" class="form-control" id= "name" name="q"  placeholder="Nombre, autor...">
                         </div>
                         
                         <div class="form-group">
                             <label for="key">Buscar por: </label>
-                            <select id ='key' name='key' class="form-control">
+                            <select id ='key' name='by' class="form-control">
                                 <option value='title'>Título</option>
                                 <option value='author'>Autor</option>
                                 <option value='isbn'>ISBN</option>
@@ -36,7 +36,7 @@
                         </div>
                         <div class="form-group">
                             <label for="tipo">Buscar en </label>
-                            <select id = 'tipo' name='tipoBusqueda' class="form-control">
+                            <select id = 'tipo' name='in' class="form-control">
                                 <option value='biblioteca'>Biblioteca</option>
                                 <option value='general'>General</option>
                             </select>

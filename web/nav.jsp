@@ -14,7 +14,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Incio <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="buscar.jsp">Buscar</a>
@@ -35,8 +35,9 @@
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      <input class="form-control mr-sm-2" name="usuario" type="search" placeholder="Usuario" aria-label="Usuario">
+      <input class="form-control mr-sm-2" name="pass" type="password" placeholder="Contraseña" aria-label="Contraseña">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
     </form>
   </div>
 </nav>

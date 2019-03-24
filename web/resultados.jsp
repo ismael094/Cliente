@@ -21,16 +21,32 @@
                 <h1 class="col-md-12 text-center m-3">Resultados: </h1>
                 
                 <%
-                    List<Book> list = Converter.getBooks(request.getParameter("key"), request.getParameter("buscar"));
-                    for (Book book : list) {
+                    List<Book> list = Converter.getBooks(request.getParameter("by"), request.getParameter("q"));
+                    if (list.size() > 0) {
+                        for (Book book : list) {
+                            %>
+                                <div class="col-md-3 row justify-content-center" style='margin-bottom: 50px'>   
+                                    <div class="col-md-12 row text-truncate">
+                                        <h6 class="col-md-12">Título: </h6> <% out.println(book.getTitle());%>
+                                        <h6 class="col-md-12">Autor: </h6><% out.println(book.getAuthor_name());%>
+                                    </div>
+                                    <div class="text-center">
+                                        <object data="<% out.println(book.getCoverUrl().trim());%>?default=false" class="img-fluid rounded" style='width: 210px;height:325px'>
+                                            <img src="http://www.bookzart.com/desktop/images/default-book-cover.png" class="img-fluid rounded" style='width: 210px;height:325px'>
+                                        </object>
+                                    </div>
+                                </div>
+                            <%
+                        }
+                    } else {
                         %>
                             <div class="col-md-3 row justify-content-center" style='margin-bottom: 50px'>   
                                 <div class="col-md-12 row text-truncate">
-                                    <h6 class="col-md-12">Título: </h6> <% out.println(book.getTitle());%>
-                                    <h6 class="col-md-12">Autor: </h6><% out.println(book.getAuthor_name());%>
+                                    No se han encontrado resultados para su búsqueda
+
                                 </div>
                                 <div class="text-center">
-                                    <object data="<% out.println(book.getCoverUrl().trim());%>?default=false" class="img-fluid rounded" style='width: 210px;height:325px'>
+                                    <object data="" class="img-fluid rounded" style='width: 210px;height:325px'>
                                         <img src="http://www.bookzart.com/desktop/images/default-book-cover.png" class="img-fluid rounded" style='width: 210px;height:325px'>
                                     </object>
                                 </div>
