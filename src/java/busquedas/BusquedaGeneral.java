@@ -26,7 +26,7 @@ public class BusquedaGeneral {
 
     private WebTarget webTarget;
     private Client client;
-    private static final String BASE_URI = "http://localhost:8080/Busquedas2/webresources";
+    private static final String BASE_URI = "http://localhost:8080/Busquedas/webresources";
 
     public BusquedaGeneral() {
         client = javax.ws.rs.client.ClientBuilder.newClient();

@@ -40,8 +40,4 @@ public class Converter {
         }
         return list;
     }
-    
-    public static void main(String[] args) {
-        List<Book> l = getBooks("title","lord of the rings");
-    }
 }
