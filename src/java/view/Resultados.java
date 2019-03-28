@@ -83,7 +83,7 @@ public class Resultados extends HttpServlet {
 "  </div>\n" +
 "</nav>");
             out.println("<h1>Resultados: </h1>");
-            List<Book> list = Converter.getBooks(request.getParameter("key"), request.getParameter("buscar"));
+            List<Book> list = Converter.getBooks(request.getParameter("key"), request.getParameter("buscar"), 0,"");
             out.println("<div class=\"container\" style=\"font-size: 15px\">");
                 out.println("<div class=\"row justify-content-center\">");
                     for (Book book : list) {

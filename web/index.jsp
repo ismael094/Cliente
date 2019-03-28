@@ -9,7 +9,7 @@
 <html>
     <head>
         <%@include file="head.jsp" %>
-        <title>JSP Page</title>
+        
     </head>
     <body>
         <%@include file="nav.jsp" %>

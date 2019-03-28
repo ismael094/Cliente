@@ -5,6 +5,7 @@
  */
 package controller;
 
+import busquedas.BusquedaBiblioteca;
 import busquedas.BusquedaGeneral;
 import com.google.gson.Gson;
 import java.io.BufferedReader;
@@ -22,10 +23,18 @@ import org.json.JSONObject;
  * @author Ismael1
  */
 public class Converter {
-    public static List<Book> getBooks(String key, String nombre) {
-        BusquedaGeneral busquedaGeneral = new BusquedaGeneral();
+    public static List<Book> getBooks(String key, String nombre, int page, String site) {
+        String res ="";
+        if (site.equals("general")) {
+            BusquedaGeneral busquedaGeneral = new BusquedaGeneral();
+            res = busquedaGeneral.getJson(key, nombre, page+"");
+        } else {
+            BusquedaBiblioteca busquedaBiblioteca = new BusquedaBiblioteca();
+            res = busquedaBiblioteca.findAll_JSON(String.class);
+            System.out.println(res);
+            res = "{ \"books\" : " + res + "}";
+        }
         
-        String res = busquedaGeneral.getJson(key, nombre);
         JSONObject obj = new JSONObject(res);
         JSONArray rest = obj.getJSONArray("books");
         List<Book> list = new ArrayList();
