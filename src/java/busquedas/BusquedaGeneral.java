@@ -10,11 +10,10 @@ import javax.ws.rs.client.Client;
 import javax.ws.rs.client.WebTarget;
 
 /**
- * Jersey REST client generated for REST resource:BusquedaGeneral
- * [busquedas]<br>
+ * Jersey REST client generated for REST resource:Filtro [filtro]<br>
  * USAGE:
  * <pre>
- *        BusquedaGeneral client = new BusquedaGeneral();
+ *        BibliotecaGeneral client = new BibliotecaGeneral();
  *        Object response = client.XXX(...);
  *        // do whatever with response
  *        client.close();
@@ -26,11 +25,17 @@ public class BusquedaGeneral {
 
     private WebTarget webTarget;
     private Client client;
-    private static final String BASE_URI = "http://localhost:8080/Busquedas2/webresources";
+    private static final String BASE_URI = "http://ws.docencia.ces.siani.es/a01/FiltroWS/webresources";
 
     public BusquedaGeneral() {
         client = javax.ws.rs.client.ClientBuilder.newClient();
-        webTarget = client.target(BASE_URI).path("busquedas");
+        webTarget = client.target(BASE_URI).path("filtro");
+    }
+
+    public String getNovedades() throws ClientErrorException {
+        WebTarget resource = webTarget;
+        resource = resource.path("Novedades");
+        return resource.request(javax.ws.rs.core.MediaType.APPLICATION_JSON).get(String.class);
     }
 
     public void putJson(Object requestEntity) throws ClientErrorException {

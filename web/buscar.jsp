@@ -28,9 +28,8 @@
                             <label for="key">Buscar por: </label>
                             <select id ='key' name='by' class="form-control">
                                 <option value='title'>Título</option>
-                                <option value='author'>Autor</option>
+                                <option value='authorName'>Autor</option>
                                 <option value='isbn'>ISBN</option>
-                                <option value='ocdl'>OCDL</option>
                                 <option value='subject'>Género</option>
                             </select>
                         </div>

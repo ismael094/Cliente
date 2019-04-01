@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://localhost:8080/MiBiblio/MiBibliotecaWS?wsdl" uri="wsdl/localhost_8080/MiBiblio/MiBibliotecaWS.wsdl"/>
+    <system systemId="http://localhost:8080/MiBiblio/MiBibliotecaWS?xsd=1" uri="wsdl/localhost_8080/MiBiblio/MiBibliotecaWS.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/Proveedor/ProveedorWS?wsdl" uri="wsdl/localhost_8080/Proveedor/ProveedorWS.wsdl"/>
+    <system systemId="http://localhost:8080/Proveedor/ProveedorWS?xsd=1" uri="wsdl/localhost_8080/Proveedor/ProveedorWS.xsd_1.xsd"/>
+    <system systemId="http://ws.docencia.ces.siani.es/a01/MiBiblio/MiBibliotecaWS?WSDL" uri="wsdl/ws.docencia.ces.siani.es/a01/MiBiblio/MiBibliotecaWS.wsdl"/>
+    <system systemId="http://ws.docencia.ces.siani.es/a01/MiBiblio/MiBibliotecaWS?xsd=1" uri="wsdl/ws.docencia.ces.siani.es/a01/MiBiblio/MiBibliotecaWS.xsd_1.xsd"/>
+</catalog>

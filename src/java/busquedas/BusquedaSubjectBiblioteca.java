@@ -11,10 +11,10 @@ import javax.ws.rs.client.WebTarget;
 
 /**
  * Jersey REST client generated for REST resource:we
- * [database.libros/novedades]<br>
+ * [database.libros/SUBJECT/{subject}]<br>
  * USAGE:
  * <pre>
- *        BusquedaBiblioteca client = new BusquedaBiblioteca();
+ *        BusquedaSubjectBiblioteca client = new BusquedaSubjectBiblioteca();
  *        Object response = client.XXX(...);
  *        // do whatever with response
  *        client.close();
@@ -22,22 +22,28 @@ import javax.ws.rs.client.WebTarget;
  *
  * @author Ismael1
  */
-public class BusquedaBiblioteca {
+public class BusquedaSubjectBiblioteca {
 
     private WebTarget webTarget;
     private Client client;
     private static final String BASE_URI = "http://ws.docencia.ces.siani.es/a01/Busquedas/webresources/";
 
-    public BusquedaBiblioteca() {
+    public BusquedaSubjectBiblioteca(String subject) {
         client = javax.ws.rs.client.ClientBuilder.newClient();
-        webTarget = client.target(BASE_URI).path("database.libros/novedades");
+        String resourcePath = java.text.MessageFormat.format("database.libros/SUBJECT/{0}", new Object[]{subject});
+        webTarget = client.target(BASE_URI).path(resourcePath);
+    }
+
+    public void setResourcePath(String subject) {
+        String resourcePath = java.text.MessageFormat.format("database.libros/SUBJECT/{0}", new Object[]{subject});
+        webTarget = client.target(BASE_URI).path(resourcePath);
     }
 
     /**
      * @param responseType Class representing the response
      * @return response object (instance of responseType class)
      */
-    public <T> T novedades_XML(Class<T> responseType) throws ClientErrorException {
+    public <T> T findBySubject_XML(Class<T> responseType) throws ClientErrorException {
         return webTarget.request(javax.ws.rs.core.MediaType.APPLICATION_XML).get(responseType);
     }
 
@@ -45,7 +51,7 @@ public class BusquedaBiblioteca {
      * @param responseType Class representing the response
      * @return response object (instance of responseType class)
      */
-    public <T> T novedades_JSON(Class<T> responseType) throws ClientErrorException {
+    public <T> T findBySubject_JSON(Class<T> responseType) throws ClientErrorException {
         return webTarget.request(javax.ws.rs.core.MediaType.APPLICATION_JSON).get(responseType);
     }
 
