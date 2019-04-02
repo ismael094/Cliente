@@ -41,6 +41,12 @@
                             </select>
                         </div>
                         <button type="submit" class="btn btn-primary">Buscar</button>
+                        <div class="form-group mt-md-5">
+                            <span class="alert alert-warning" role="alert">
+                                ¡Alerta! En búsqueda general no permite buscar por autor.
+                                
+                            </span>
+                        </div>
                     </form>
                 </div>
             </div>

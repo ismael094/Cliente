@@ -4,6 +4,7 @@
     Author     : Ismael1
 --%>
 
+<%@page import="model.Libros"%>
 <%
     if (list == null || list.size() > 0) {
         int inicio = 0;

@@ -13,7 +13,7 @@
 <html>
     <head>
         <%@include file="head.jsp" %>
-        <title>JSP Page</title>
+        <title>MiBiblioteca</title>
     </head>
     <body>
         <%@include file="nav.jsp" %>

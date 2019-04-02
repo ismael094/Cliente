@@ -4,6 +4,7 @@
     Author     : Ismael1
 --%>
 
+<%@page import="java.util.concurrent.TimeUnit"%>
 <%@page import="controller.Converter"%>
 <%@page import="java.util.Date"%>
 <%@page import="model.Reservas"%>
@@ -49,7 +50,12 @@
                     %>
                         <div class="navbar-text mr-md-3">
                             <span class="alert alert-danger" role="alert">
-                                Penalizado hasta dentro de <% out.print(reser.getPenalizacion() - new Date().compareTo(reser.getFechaEntrega())+1);%> días
+                                <% 
+                                    long diffInMillies = Math.abs(new Date().getTime() - reser.getFechaEntrega().getTime());
+                                    long diff = TimeUnit.DAYS.convert(diffInMillies, TimeUnit.MILLISECONDS);
+                                
+                                %>
+                                Penalizado hasta dentro de <% out.print(reser.getPenalizacion() - diff);%> días
                             </span>
                         </div>
                     <% 

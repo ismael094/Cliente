@@ -16,8 +16,8 @@
     mibiblio.MiBibliotecaWS_Service service = new mibiblio.MiBibliotecaWS_Service();
     mibiblio.MiBibliotecaWS port = service.getMiBibliotecaWSPort();
      // TODO initialize WS operation arguments here
-    java.lang.String usuario = request.getParameter("usuario");
-    java.lang.String pass = request.getParameter("pass");
+    String usuario = request.getParameter("usuario");
+    String pass = request.getParameter("pass");
     boolean error = false;
     String user  = "";
     int tipo = 0;
@@ -38,18 +38,20 @@
         }
     } else {
         Cookie[] cookies = request.getCookies();
-    
-        for (Cookie c : cookies) {
-            if (c.getName().equals("user")) {
-                isLoged = true;
-                JSONObject obj = new JSONObject(c.getValue());
-                user = obj.getString("nombre");
-                tipo = obj.getInt("tipo");
-                c.setMaxAge(30*60);
-                response.addCookie(c);
-                break;
-            }
-        }  
+        if (cookies != null) {
+            for (Cookie cookie : cookies) {
+                if (cookie.getName().equals("user")) {
+                    isLoged = true;
+                    JSONObject obj = new JSONObject(cookie.getValue());
+                    user = obj.getString("nombre");
+                    tipo = obj.getInt("tipo");
+                    cookie.setMaxAge(30*60);
+                    response.addCookie(cookie);
+                    break;
+                }
+            } 
+        }
+            
     }
     
     
