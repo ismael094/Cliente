@@ -25,7 +25,7 @@
                             <label for="exampleInputEmail1">Fecha entrega: </label>
                             <%
                                 if (!isLoged || request.getParameter("isbn") == null) 
-                                    response.sendRedirect("index.jsp");
+                                    response.sendRedirect("http://ws.docencia.ces.siani.es/a01/Cliente/index.jsp");
                                 DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
                                 DateFormat year = new SimpleDateFormat("yyyy");
                                 DateFormat month = new SimpleDateFormat("MM");

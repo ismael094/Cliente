@@ -15,8 +15,8 @@
         <%@include file="nav.jsp" %>
         <%
             try {
-                if (!isLoged && penalizado) 
-                    response.sendRedirect("index.jsp");
+                if (!isLoged || penalizado) 
+                    response.sendRedirect("http://ws.docencia.ces.siani.es/a01/Cliente/index.jsp");
                 mibiblio.MiBibliotecaWS_Service service5 = new mibiblio.MiBibliotecaWS_Service();
                 mibiblio.MiBibliotecaWS port5 = service5.getMiBibliotecaWSPort();
                  // TODO initialize WS operation arguments here

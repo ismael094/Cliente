@@ -9,7 +9,7 @@
     <%
     try { 
         if (!isLoged || request.getParameter("id") == null) {
-            response.sendRedirect("index.jsp");
+            response.sendRedirect("http://ws.docencia.ces.siani.es/a01/Cliente/index.jsp");
         }
 	service = new mibiblio.MiBibliotecaWS_Service();
 	int id = Integer.parseInt(request.getParameter("id"));

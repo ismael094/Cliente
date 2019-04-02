@@ -14,5 +14,5 @@
             break;
         }
     }
-    response.sendRedirect("index.jsp");    
+    response.sendRedirect("http://ws.docencia.ces.siani.es/a01/Cliente/index.jsp");   
 %>

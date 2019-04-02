@@ -26,7 +26,7 @@
                     
                     <%
                         if (!isLoged) 
-                            response.sendRedirect("index.jsp");
+                            response.sendRedirect("http://ws.docencia.ces.siani.es/a01/Cliente/index.jsp");
                         List<Reservas> list = Converter.misreservas(user);
                         if (list.size() > 0) {
                             for (Reservas reserva : list) {

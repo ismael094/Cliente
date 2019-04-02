@@ -47,6 +47,9 @@
                                   <input type="hidden" name="isbn" value="<% out.print(request.getParameter("isbn"));%>">
                                 </div>
                                 <button type="submit" class="btn btn-primary">Submit</button>
+                                <div class="alert alert-danger text-center" role="alert">
+                                    Sólo se permiten cantidades menores a 30
+                                </div>
                             </form>
                         </div>
                     </div>
