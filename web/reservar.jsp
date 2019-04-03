@@ -37,7 +37,7 @@
                                     m = "0"+m;
                                 }
                             %>
-                          <input type="date" name="fechaEntrega" class="form-control" min="<% out.print(dateFormat.format(date));%>" max="<% out.print(""+year.format(date)+"-"+m+"-30");%>" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                          <input type="date" name="fechaEntrega" class="form-control" min="<% out.print(dateFormat.format(date));%>" max="<% out.print(""+year.format(date)+"-"+m+"-"+day.format(date));%>" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
                           <small id="emailHelp" class="form-text text-muted">Sólo puedes reservar un libro durante 31 días.</small>
                           <input type="hidden" name="currentDate" value="<% out.print(dateFormat.format(date));%>">
                           <input type="hidden" name="isbn" value="<% out.print(request.getParameter("isbn"));%>">
