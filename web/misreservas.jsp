@@ -31,7 +31,8 @@
                         if (list.size() > 0) {
                             for (Reservas reserva : list) {
                                 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-                                Date date1 = new Date();
+                                Date date1 = sdf.parse(sdf.format(new Date()));
+                                
                                 Date date2 = reserva.getFechaEntrega();
                                 int compare = date2.compareTo(date1);
                                 %>
@@ -64,7 +65,11 @@
                                                     
                                             } else {
                                                 %>
-                                                    <h5 class="col-md-12">Entregado <% out.println(new SimpleDateFormat("dd-MM-yyyy").format(reserva.getFechaEntrega()));%></h5>
+                                                    <h5 class="col-md-12">
+                                                        Entregado <% out.println(new SimpleDateFormat("dd-MM-yyyy").format(reserva.getFechaInicio()));%>
+                                                        y devuelto <% out.println(new SimpleDateFormat("dd-MM-yyyy").format(reserva.getFechaEntrega()));%>
+                                                    
+                                                    </h5>
                                                 
                                                <%
                                             }

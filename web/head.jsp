@@ -30,6 +30,7 @@
             String data = "{ 'nombre' : '"+usuario+"', 'tipo' : "+t+" }";
             Cookie loginCookie = new Cookie("user",data);
             isLoged = true;
+            tipo = t;
             user = usuario;
             loginCookie.setMaxAge(30*60);
             response.addCookie(loginCookie);

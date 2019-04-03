@@ -34,6 +34,6 @@
     } catch (Exception ex) { 
         ;
     }
-    response.sendRedirect("index.jsp");   
+    response.sendRedirect("http://ws.docencia.ces.siani.es/a01/Cliente/index.jsp");   
     %>
     <%-- end web service invocation --%><hr/>

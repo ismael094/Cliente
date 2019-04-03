@@ -4,6 +4,10 @@
 
 <xs:element name="comprarResponse" type="tns:comprarResponse"/>
 
+<xs:element name="compras" type="tns:compras"/>
+
+<xs:element name="comprasResponse" type="tns:comprasResponse"/>
+
 <xs:element name="devolver" type="tns:devolver"/>
 
 <xs:element name="devolverResponse" type="tns:devolverResponse"/>
@@ -32,6 +36,10 @@
 
 <xs:element name="reservarResponse" type="tns:reservarResponse"/>
 
+<xs:element name="reservasActivas" type="tns:reservasActivas"/>
+
+<xs:element name="reservasActivasResponse" type="tns:reservasActivasResponse"/>
+
 <xs:complexType name="reservar">
 <xs:sequence>
 <xs:element name="usuario" type="xs:string" minOccurs="0"/>
@@ -42,18 +50,6 @@
 </xs:complexType>
 
 <xs:complexType name="reservarResponse">
-<xs:sequence>
-<xs:element name="return" type="xs:boolean"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="devolver">
-<xs:sequence>
-<xs:element name="id" type="xs:int"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="devolverResponse">
 <xs:sequence>
 <xs:element name="return" type="xs:boolean"/>
 </xs:sequence>
@@ -71,6 +67,18 @@
 </xs:sequence>
 </xs:complexType>
 
+<xs:complexType name="devolver">
+<xs:sequence>
+<xs:element name="id" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="devolverResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
 <xs:complexType name="comprar">
 <xs:sequence>
 <xs:element name="isbn" type="xs:string" minOccurs="0"/>
@@ -81,6 +89,38 @@
 <xs:complexType name="comprarResponse">
 <xs:sequence>
 <xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="compras">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="comprasResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="reservasActivas">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="reservasActivasResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="gettipo">
+<xs:sequence>
+<xs:element name="usuario" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="gettipoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
 </xs:sequence>
 </xs:complexType>
 
@@ -97,18 +137,6 @@
 <xs:complexType name="registroResponse">
 <xs:sequence>
 <xs:element name="return" type="xs:boolean"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="gettipo">
-<xs:sequence>
-<xs:element name="usuario" type="xs:string" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="gettipoResponse">
-<xs:sequence>
-<xs:element name="return" type="xs:int"/>
 </xs:sequence>
 </xs:complexType>
 

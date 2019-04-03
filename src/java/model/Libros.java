@@ -89,6 +89,8 @@ public class Libros implements Serializable {
     private String publisher;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idLibro")
     private Collection<Reservas> reservasCollection;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idLibro")
+    private transient Collection<ComprasModel> comprasCollection;
 
     public Libros() {
     }
@@ -108,6 +110,16 @@ public class Libros implements Serializable {
         this.stock = stock;
         this.publisher = publisher;
     }
+
+    public Collection<ComprasModel> getComprasCollection() {
+        return comprasCollection;
+    }
+
+    public void setComprasCollection(Collection<ComprasModel> comprasCollection) {
+        this.comprasCollection = comprasCollection;
+    }
+    
+    
 
     public Integer getId() {
         return id;

@@ -15,7 +15,7 @@
         <%@include file="nav.jsp" %>
         <%
             if (tipo != 2)
-                response.sendRedirect("index.jsp");
+                response.sendRedirect("http://ws.docencia.ces.siani.es/a01/Cliente/index.jsp");
             if (request.getParameter("cantidad") != null) {
                 service = new mibiblio.MiBibliotecaWS_Service();
                 boolean compra = service.getMiBibliotecaWSPort().comprar(request.getParameter("isbn"),Integer.parseInt(request.getParameter("cantidad")));  

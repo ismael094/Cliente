@@ -28,7 +28,7 @@
                             <label for="key">Buscar por: </label>
                             <select id ='key' name='by' class="form-control">
                                 <option value='title'>Título</option>
-                                <option value='authorName'>Autor</option>
+                                <option value='author'>Autor</option>
                                 <option value='isbn'>ISBN</option>
                                 <option value='subject'>Género</option>
                             </select>
@@ -41,12 +41,6 @@
                             </select>
                         </div>
                         <button type="submit" class="btn btn-primary">Buscar</button>
-                        <div class="form-group mt-md-5">
-                            <span class="alert alert-warning" role="alert">
-                                ¡Alerta! En búsqueda general no permite buscar por autor.
-                                
-                            </span>
-                        </div>
                     </form>
                 </div>
             </div>

@@ -4,7 +4,7 @@
   </services>
   <clients>
     <client name="MiBibliotecaWS">
-      <wsdl-url>http://ws.docencia.ces.siani.es/a01/MiBiblio/MiBibliotecaWS?WSDL</wsdl-url>
+      <wsdl-url>http://ws.docencia.ces.siani.es/a01/MiBiblio/MiBibliotecaWS?wsdl</wsdl-url>
       <local-wsdl-file>ws.docencia.ces.siani.es/a01/MiBiblio/MiBibliotecaWS.wsdl</local-wsdl-file>
       <package-name forceReplace="true">mibiblio</package-name>
       <catalog-file>catalog.xml</catalog-file>
@@ -23,7 +23,7 @@
         </wsimport-option>
         <wsimport-option>
           <wsimport-option-name>wsdlLocation</wsimport-option-name>
-          <wsimport-option-value>http://ws.docencia.ces.siani.es/a01/MiBiblio/MiBibliotecaWS?WSDL</wsimport-option-value>
+          <wsimport-option-value>http://ws.docencia.ces.siani.es/a01/MiBiblio/MiBibliotecaWS?wsdl</wsimport-option-value>
         </wsimport-option>
         <wsimport-option>
           <wsimport-option-name>xnocompile</wsimport-option-name>

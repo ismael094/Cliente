@@ -33,8 +33,9 @@
                     <div class="col-md-12 row text-truncate">
                         <h6 class="col-md-12">Título: </h6> <% out.println(book.getTitle());%>
                         <h6 class="col-md-12">Autor: </h6><% out.println(book.getAuthorName());%>
+                        <h6 class="col-md-12">Año: </h6><% out.println(book.getPublishYear());%>
                         <%
-                            if (!penalizado && isLoged && (request.getParameter("in") == null || ( request.getParameter("in").equals("biblioteca")))) {
+                            if (tipo == 1 && !penalizado && isLoged && (request.getParameter("in") == null || ( request.getParameter("in").equals("biblioteca")))) {
                         %>
                             <form class="col-md-12 form-inline my-2 my-lg-0 text-center mx-auto" action="reservar.jsp" method="POST">
                                 <input type="hidden" name="isbn" value="<% out.print(book.getIsbn().trim());%>">

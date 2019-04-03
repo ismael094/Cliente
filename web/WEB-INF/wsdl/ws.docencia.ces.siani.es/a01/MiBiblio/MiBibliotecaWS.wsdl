@@ -4,6 +4,54 @@
 <xsd:import namespace="http://webservice/" schemaLocation="http://ws.docencia.ces.siani.es/a01/MiBiblio/MiBibliotecaWS?xsd=1"/>
 </xsd:schema>
 </types>
+<message name="reservasActivas">
+<part name="parameters" element="tns:reservasActivas"/>
+</message>
+<message name="reservasActivasResponse">
+<part name="parameters" element="tns:reservasActivasResponse"/>
+</message>
+<message name="login">
+<part name="parameters" element="tns:login"/>
+</message>
+<message name="loginResponse">
+<part name="parameters" element="tns:loginResponse"/>
+</message>
+<message name="gettipo">
+<part name="parameters" element="tns:gettipo"/>
+</message>
+<message name="gettipoResponse">
+<part name="parameters" element="tns:gettipoResponse"/>
+</message>
+<message name="compras">
+<part name="parameters" element="tns:compras"/>
+</message>
+<message name="comprasResponse">
+<part name="parameters" element="tns:comprasResponse"/>
+</message>
+<message name="registro">
+<part name="parameters" element="tns:registro"/>
+</message>
+<message name="registroResponse">
+<part name="parameters" element="tns:registroResponse"/>
+</message>
+<message name="reservar">
+<part name="parameters" element="tns:reservar"/>
+</message>
+<message name="reservarResponse">
+<part name="parameters" element="tns:reservarResponse"/>
+</message>
+<message name="misreservas">
+<part name="parameters" element="tns:misreservas"/>
+</message>
+<message name="misreservasResponse">
+<part name="parameters" element="tns:misreservasResponse"/>
+</message>
+<message name="penalizaciones">
+<part name="parameters" element="tns:penalizaciones"/>
+</message>
+<message name="penalizacionesResponse">
+<part name="parameters" element="tns:penalizacionesResponse"/>
+</message>
 <message name="devolver">
 <part name="parameters" element="tns:devolver"/>
 </message>
@@ -16,43 +64,39 @@
 <message name="comprarResponse">
 <part name="parameters" element="tns:comprarResponse"/>
 </message>
-<message name="registro">
-<part name="parameters" element="tns:registro"/>
-</message>
-<message name="registroResponse">
-<part name="parameters" element="tns:registroResponse"/>
-</message>
-<message name="misreservas">
-<part name="parameters" element="tns:misreservas"/>
-</message>
-<message name="misreservasResponse">
-<part name="parameters" element="tns:misreservasResponse"/>
-</message>
-<message name="reservar">
-<part name="parameters" element="tns:reservar"/>
-</message>
-<message name="reservarResponse">
-<part name="parameters" element="tns:reservarResponse"/>
-</message>
-<message name="penalizaciones">
-<part name="parameters" element="tns:penalizaciones"/>
-</message>
-<message name="penalizacionesResponse">
-<part name="parameters" element="tns:penalizacionesResponse"/>
-</message>
-<message name="gettipo">
-<part name="parameters" element="tns:gettipo"/>
-</message>
-<message name="gettipoResponse">
-<part name="parameters" element="tns:gettipoResponse"/>
-</message>
-<message name="login">
-<part name="parameters" element="tns:login"/>
-</message>
-<message name="loginResponse">
-<part name="parameters" element="tns:loginResponse"/>
-</message>
 <portType name="MiBibliotecaWS">
+<operation name="reservasActivas">
+<input wsam:Action="http://webservice/MiBibliotecaWS/reservasActivasRequest" message="tns:reservasActivas"/>
+<output wsam:Action="http://webservice/MiBibliotecaWS/reservasActivasResponse" message="tns:reservasActivasResponse"/>
+</operation>
+<operation name="login">
+<input wsam:Action="http://webservice/MiBibliotecaWS/loginRequest" message="tns:login"/>
+<output wsam:Action="http://webservice/MiBibliotecaWS/loginResponse" message="tns:loginResponse"/>
+</operation>
+<operation name="gettipo">
+<input wsam:Action="http://webservice/MiBibliotecaWS/gettipoRequest" message="tns:gettipo"/>
+<output wsam:Action="http://webservice/MiBibliotecaWS/gettipoResponse" message="tns:gettipoResponse"/>
+</operation>
+<operation name="compras">
+<input wsam:Action="http://webservice/MiBibliotecaWS/comprasRequest" message="tns:compras"/>
+<output wsam:Action="http://webservice/MiBibliotecaWS/comprasResponse" message="tns:comprasResponse"/>
+</operation>
+<operation name="registro">
+<input wsam:Action="http://webservice/MiBibliotecaWS/registroRequest" message="tns:registro"/>
+<output wsam:Action="http://webservice/MiBibliotecaWS/registroResponse" message="tns:registroResponse"/>
+</operation>
+<operation name="reservar">
+<input wsam:Action="http://webservice/MiBibliotecaWS/reservarRequest" message="tns:reservar"/>
+<output wsam:Action="http://webservice/MiBibliotecaWS/reservarResponse" message="tns:reservarResponse"/>
+</operation>
+<operation name="misreservas">
+<input wsam:Action="http://webservice/MiBibliotecaWS/misreservasRequest" message="tns:misreservas"/>
+<output wsam:Action="http://webservice/MiBibliotecaWS/misreservasResponse" message="tns:misreservasResponse"/>
+</operation>
+<operation name="penalizaciones">
+<input wsam:Action="http://webservice/MiBibliotecaWS/penalizacionesRequest" message="tns:penalizaciones"/>
+<output wsam:Action="http://webservice/MiBibliotecaWS/penalizacionesResponse" message="tns:penalizacionesResponse"/>
+</operation>
 <operation name="devolver">
 <input wsam:Action="http://webservice/MiBibliotecaWS/devolverRequest" message="tns:devolver"/>
 <output wsam:Action="http://webservice/MiBibliotecaWS/devolverResponse" message="tns:devolverResponse"/>
@@ -61,33 +105,81 @@
 <input wsam:Action="http://webservice/MiBibliotecaWS/comprarRequest" message="tns:comprar"/>
 <output wsam:Action="http://webservice/MiBibliotecaWS/comprarResponse" message="tns:comprarResponse"/>
 </operation>
-<operation name="registro">
-<input wsam:Action="http://webservice/MiBibliotecaWS/registroRequest" message="tns:registro"/>
-<output wsam:Action="http://webservice/MiBibliotecaWS/registroResponse" message="tns:registroResponse"/>
-</operation>
-<operation name="misreservas">
-<input wsam:Action="http://webservice/MiBibliotecaWS/misreservasRequest" message="tns:misreservas"/>
-<output wsam:Action="http://webservice/MiBibliotecaWS/misreservasResponse" message="tns:misreservasResponse"/>
-</operation>
-<operation name="reservar">
-<input wsam:Action="http://webservice/MiBibliotecaWS/reservarRequest" message="tns:reservar"/>
-<output wsam:Action="http://webservice/MiBibliotecaWS/reservarResponse" message="tns:reservarResponse"/>
-</operation>
-<operation name="penalizaciones">
-<input wsam:Action="http://webservice/MiBibliotecaWS/penalizacionesRequest" message="tns:penalizaciones"/>
-<output wsam:Action="http://webservice/MiBibliotecaWS/penalizacionesResponse" message="tns:penalizacionesResponse"/>
-</operation>
-<operation name="gettipo">
-<input wsam:Action="http://webservice/MiBibliotecaWS/gettipoRequest" message="tns:gettipo"/>
-<output wsam:Action="http://webservice/MiBibliotecaWS/gettipoResponse" message="tns:gettipoResponse"/>
-</operation>
-<operation name="login">
-<input wsam:Action="http://webservice/MiBibliotecaWS/loginRequest" message="tns:login"/>
-<output wsam:Action="http://webservice/MiBibliotecaWS/loginResponse" message="tns:loginResponse"/>
-</operation>
 </portType>
 <binding name="MiBibliotecaWSPortBinding" type="tns:MiBibliotecaWS">
 <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+<operation name="reservasActivas">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="login">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="gettipo">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="compras">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="registro">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="reservar">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="misreservas">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="penalizaciones">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
 <operation name="devolver">
 <soap:operation soapAction=""/>
 <input>
@@ -98,60 +190,6 @@
 </output>
 </operation>
 <operation name="comprar">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="registro">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="misreservas">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="reservar">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="penalizaciones">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="gettipo">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="login">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>

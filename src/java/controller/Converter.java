@@ -19,7 +19,7 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.List;
-import model.Book;
+import model.ComprasModel;
 import model.Libros;
 import model.Reservas;
 import org.json.JSONArray;
@@ -51,7 +51,7 @@ public class Converter {
                         Converter.num = tmp.length();
                         break;
                     }
-                case "authorName":
+                case "author":
                     {
                         BusquedaAutorBiblioteca busquedaBiblioteca = new BusquedaAutorBiblioteca(nombre);
                         res = busquedaBiblioteca.findByAuthorName_JSON(String.class);
@@ -118,6 +118,26 @@ public class Converter {
         List<Reservas> b = g.fromJson(res, new TypeToken<List<Reservas>>(){}.getType());
         return b;
     }
+
+    public static List<ComprasModel> compras() {
+        mibiblio.MiBibliotecaWS_Service service = new mibiblio.MiBibliotecaWS_Service();
+        mibiblio.MiBibliotecaWS port = service.getMiBibliotecaWSPort();
+        String res = port.compras();
+        Gson g = new Gson();
+        List<ComprasModel> b = g.fromJson(res, new TypeToken<List<ComprasModel>>(){}.getType());
+        return b;
+    }
+
+    public static List<Reservas> reservasActivas() {
+        mibiblio.MiBibliotecaWS_Service service = new mibiblio.MiBibliotecaWS_Service();
+        mibiblio.MiBibliotecaWS port = service.getMiBibliotecaWSPort();
+        String res = port.reservasActivas();
+        Gson g = new Gson();
+        List<Reservas> b = g.fromJson(res, new TypeToken<List<Reservas>>(){}.getType());
+        return b;
+    }
+    
+    
     
     
     

@@ -15,7 +15,7 @@
 	int id = Integer.parseInt(request.getParameter("id"));
 	// TODO process result here
 	boolean result = service.getMiBibliotecaWSPort().devolver(id);
-        response.sendRedirect("misreservas.jsp"); 
+        response.sendRedirect("http://ws.docencia.ces.siani.es/a01/Cliente/misreservas.jsp"); 
     } catch (Exception ex) {
 	// TODO handle custom exceptions here
     }

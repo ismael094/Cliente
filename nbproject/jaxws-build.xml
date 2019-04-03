@@ -28,7 +28,7 @@
     </target>
     <target name="wsimport-client-MiBibliotecaWS" depends="wsimport-init">
         <mkdir dir="${build.generated.dir}/jax-wsCache/MiBibliotecaWS"/>
-        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/MiBibliotecaWS" destdir="${build.generated.dir}/jax-wsCache/MiBibliotecaWS" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/MiBibliotecaWS/wsdl/ws.docencia.ces.siani.es/a01/MiBiblio/MiBibliotecaWS.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://ws.docencia.ces.siani.es/a01/MiBiblio/MiBibliotecaWS?WSDL" xnocompile="true" xendorsed="true" package="mibiblio">
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/MiBibliotecaWS" destdir="${build.generated.dir}/jax-wsCache/MiBibliotecaWS" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/MiBibliotecaWS/wsdl/ws.docencia.ces.siani.es/a01/MiBiblio/MiBibliotecaWS.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://ws.docencia.ces.siani.es/a01/MiBiblio/MiBibliotecaWS?wsdl" xnocompile="true" xendorsed="true" package="mibiblio">
             <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/MiBibliotecaWS/wsdl/ws.docencia.ces.siani.es/a01/MiBiblio/MiBibliotecaWS.wsdl"/>
             <produces dir="${build.generated.dir}/jax-wsCache/MiBibliotecaWS"/>
         </wsimport>

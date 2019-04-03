@@ -5,5 +5,6 @@
     <system systemId="http://localhost:8080/MiBiblio/MiBibliotecaWS?wsdl" uri="src/conf/xml-resources/web-service-references/MiBibliotecaWS/wsdl/localhost_8080/MiBiblio/MiBibliotecaWS.wsdl"/>
     <system systemId="http://localhost:8080/MiBiblio/MiBibliotecaWS?xsd=1" uri="src/conf/xml-resources/web-service-references/MiBibliotecaWS/wsdl/localhost_8080/MiBiblio/MiBibliotecaWS.xsd_1.xsd"/>
     <system systemId="http://ws.docencia.ces.siani.es/a01/MiBiblio/MiBibliotecaWS?WSDL" uri="src/conf/xml-resources/web-service-references/MiBibliotecaWS/wsdl/ws.docencia.ces.siani.es/a01/MiBiblio/MiBibliotecaWS.wsdl"/>
+    <system systemId="http://ws.docencia.ces.siani.es/a01/MiBiblio/MiBibliotecaWS?wsdl" uri="src/conf/xml-resources/web-service-references/MiBibliotecaWS/wsdl/ws.docencia.ces.siani.es/a01/MiBiblio/MiBibliotecaWS.wsdl"/>
     <system systemId="http://ws.docencia.ces.siani.es/a01/MiBiblio/MiBibliotecaWS?xsd=1" uri="src/conf/xml-resources/web-service-references/MiBibliotecaWS/wsdl/ws.docencia.ces.siani.es/a01/MiBiblio/MiBibliotecaWS.xsd_1.xsd"/>
 </catalog>

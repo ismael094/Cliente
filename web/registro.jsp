@@ -38,7 +38,7 @@
                         
                         <div class="form-group">
                             <label for="dni">DNI</label>
-                            <input type="text" class="form-control" id="dni" name="dni" required>
+                            <input type="number" class="form-control" id="dni" name="dni" required>
                         </div>
                         
                         <div class="form-group">

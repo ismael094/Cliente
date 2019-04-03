@@ -10,8 +10,8 @@
 <%@page import="model.Reservas"%>
 <%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">MiBiblioteca</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="index.jsp">MiBiblioteca</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -26,11 +26,22 @@
         </li>
         <%
             if (isLoged) {
-        %>
-            <li class="nav-item">
-                <a class="nav-link" href="misreservas.jsp">Mis reservas</a>
-            </li>
-        <%
+                if (tipo == 1) {
+                    %>
+                        <li class="nav-item">
+                            <a class="nav-link" href="misreservas.jsp">Mis reservas</a>
+                        </li>
+                    <%
+                } else {
+                    %>
+                        <li class="nav-item">
+                            <a class="nav-link" href="reservas.jsp">Reservas activas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="compras.jsp">Compras</a>
+                        </li>
+                    <%
+                }
             } else {
                 %>
                     <li class="nav-item">
