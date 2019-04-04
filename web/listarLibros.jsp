@@ -17,7 +17,7 @@
 
                 fin = pagina*10;
                 inicio = fin-10;
-                if (list.size()-10 < 10) {
+                if (list.size()-inicio < 10) {
                     fin = list.size();
                 }
             } else {
